@@ -1,0 +1,56 @@
+This file explains all the instruction in Assembly and their binary equivalent
+
+0000 NOP - Does nothing
+01XX JMP - Jump to address
+02XX JIC - Jump to address if carry is set
+03XX JIZ - Jump to address if zero is set
+04XX LDA - Load from ram to the A register
+05XX STA - Store the A register to ram
+06XX LDB - Load from ram to the B register
+07XX STB - Store the B register to ram
+0800 PLA - Pull from stack to the A register
+0900 PSA - Push from A to stack
+0A00 PLB - Pull from stack to the B register
+0B00 PSB - Push from B to stack
+0C00 PLO - Pull from stack to the Out register
+0DXX PSR - Push from Ram to stack
+0EXX PLR - Pull from stack to Ram
+0FXX SSP - Set the stack pointer
+
+10XX LIA - Load the value to A
+11XX LIB - Load the value to B
+1200 JMS - Jump to stack
+1300 JCS - Jump to stack if carry is set
+1400 JZS - Jump to stack if zero is set
+15XX JMR - Jump to Ram
+13XX JCR - Jump to Ram if carry is set
+14XX JZR - Jump to Ram if zero is set
+
+2XXX - Does the operation between A and B and store it to ram
+
+3X00 - Does the operation between A and B and store it to A
+
+4X00 - Does the operation between A and B and store it to B
+
+5X00 - Does the operation between A and B and store it to Out
+
+6X00 - Does the operation between A and B and store it to Stack
+
+FFFF - Halt the process
+
+
+Operation :
+0 BUFF - Just return A
+1 NOT  - Just return not A
+2 ROR  - Just rotate A to the right
+3 ROL  - Just rotate A to the left
+4 OR   - Does A or B
+5 NOR  - Does not (A or B)
+6 AND  - Does A and B
+7 NAND - Does not (A and B)
+8 ADD  - Does A + B (sets the Carry flag)
+9 SUB  - Does A - B (sets the Zero flag)
+
+# HEX
+% BIN
+$ DEC

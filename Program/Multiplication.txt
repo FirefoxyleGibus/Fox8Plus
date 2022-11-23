@@ -1,0 +1,25 @@
+A = $2
+B = $1
+
+	LIA #0
+	STA #00
+	LIB B
+	PSB
+
+loop:
+	LDA #00
+	LIB A
+	OPR ADD #00
+	JIC carry_stop
+	PLA
+	LIB $1
+	OPA SUB
+	PSA
+	JIZ stop
+	JMP loop
+
+carry_stop:
+	LIA #FF
+	STA #00
+stop:
+	HLT

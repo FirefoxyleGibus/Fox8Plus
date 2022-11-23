@@ -1,0 +1,15 @@
+val1 = $0
+inc = $1
+
+	LIA val1
+	LIB inc
+
+adding:
+	OPA ADD
+	JIC subbing
+	JMP adding
+
+subbing:
+	OPA SUB
+	JIZ adding
+	JMP subbing
