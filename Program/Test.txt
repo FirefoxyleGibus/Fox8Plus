@@ -1,0 +1,6 @@
+	LIA $50
+	LIB $150
+	OPR ADD #00
+	PSR #00
+	PLO
+	HLT

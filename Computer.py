@@ -281,6 +281,13 @@ def runComputer(frequence):
     while(not Halt):
         doOneCycle(frequence)
 
+def test():
+    t1 = perf_counter()
+    while(not Halt):
+        DoStep()
+    t2 = perf_counter()
+    print(t1-t2)
+
 def loadProgram(file):
     with open(file, mode='r') as f:
         data = f.read().split(" ")
@@ -300,7 +307,7 @@ def Main():
 def Loop():
     pass
 
-readProgram(assemble(r"Program\Multiplication.txt"))
-runComputer(5000)
-print(Ram[0])
+readProgram(assemble(r"C:\Users\maxen\Documents\Computer\Emulated\Program\Multiplication.txt"))
+test()
+print(OUT)
 input()

@@ -13,8 +13,8 @@ This file explains all the instruction in Assembly and their binary equivalent
 0A00 PLB - Pull from stack to the B register
 0B00 PSB - Push from B to stack
 0C00 PLO - Pull from stack to the Out register
-0DXX PSR - Push from Ram to stack
-0EXX PLR - Pull from stack to Ram
+0DXX PLR - Pull from Ram to stack
+0EXX PSR - Push from stack to Ram
 0FXX SSP - Set the stack pointer
 
 10XX LIA - Load the value to A

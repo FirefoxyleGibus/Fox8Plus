@@ -1,5 +1,5 @@
-A = $2
-B = $1
+A = $1
+B = $255
 
 	LIA #0
 	STA #00
@@ -22,4 +22,6 @@ carry_stop:
 	LIA #FF
 	STA #00
 stop:
+	PSR #00
+	PLO
 	HLT

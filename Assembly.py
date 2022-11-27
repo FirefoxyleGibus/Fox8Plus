@@ -11,8 +11,8 @@ instr = {"NOP":"00",
          "PLB":"0A",
          "PSB":"0B",
          "PLO":"0C",
-         "PSR":"0D",
-         "PLR":"0E",
+         "PLR":"0D",
+         "PSR":"0E",
          "SSP":"0F",
          "LIA":"10",
          "LIB":"11",
@@ -27,7 +27,8 @@ instr = {"NOP":"00",
          "OPB":"4",
          "OPO":"5",
          "OPS":"6",
-         "SHO":"FF00",
+         "HDR +":"FFFD",
+         "HDR P":"FFFE",
          "HLT":"FFFF"}
 
 operation = {"BUFF":"0",
@@ -112,3 +113,7 @@ def assemble(file):
             out += decodeOneInstr(curr,variable) + " "
     print(out)
     return out
+
+if __name__ == "__main__":
+    with open(r"C:\Users\maxen\Documents\Computer\test","w") as F:
+        F.write(assemble(r"Program\Test.txt"))
