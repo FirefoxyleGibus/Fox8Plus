@@ -115,5 +115,5 @@ def assemble(file):
     return out
 
 if __name__ == "__main__":
-    with open(r"C:\Users\maxen\Documents\Computer\test","w") as F:
-        F.write(assemble(r"Program\Test.txt"))
+    with open(r"Compiled\B&F.f8p","w") as F:
+        F.write(assemble(r"Program\BackAndForth.txt"))
