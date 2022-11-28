@@ -98,13 +98,13 @@ def assemble(file):
             continue
         if (curr[-1] == ":"):
             variable[i[:-1]] = hex(count)[2:]
-        elif ("=" in curr):
+        elif ("=" in curr or "/" in curr):
             pass
         else:
             count += 1
     for i in lines:
         curr = i.replace("\t","")
-        if (curr == ""):
+        if (curr == "" or "/" in curr):
             continue
         if ("=" in curr):
             A, B = decodeVariable(curr,variable)
